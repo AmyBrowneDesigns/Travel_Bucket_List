@@ -28,8 +28,10 @@ city3 = City("Buenos Aires", False)
 city_repository.save(city3)
 city4 = City("Shangai", False)
 city_repository.save(city4)
-
-# city_repository.select_all() is this needed at the end?
+city5 = City("Dubai", False)
+city_repository.save(city5)
+city6 = City("Beijing", False)
+city7 = City("Sharjah", False)
 
 
 pdb.set_trace()

@@ -5,7 +5,7 @@ from models.city import City
 
 
 def save(country):
-    sql = "INSERT INTO countries(name) VALUES (%s) RETURNING *"
+    sql = "INSERT INTO country(name) VALUES (%s) RETURNING *"
     values = [country.name]
     results = run_sql(sql, values)
     id = results[0]['id']
@@ -16,7 +16,7 @@ def save(country):
 def select_all():
     country = []
 
-    sql = "SELECT * FROM countries"
+    sql = "SELECT * FROM country"
     results = run_sql(sql)
 
     for rown in results:
