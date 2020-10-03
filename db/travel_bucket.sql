@@ -12,3 +12,6 @@ CREATE TABLE city (
     visited BOOLEAN,
     country_id INT REFERENCES country(id)
 );
+
+
+-- should these be cities and countries to go with repos? it does create table though!

@@ -6,7 +6,7 @@ import repositories.city_repository as city_repository
 
 
 def save(city):
-    sql = "INSERT INTO city (name, visited, country_id) VALUES ( %s, %s,%s) RETURNING *"
+    sql = "INSERT INTO cities (name, visited, country_id) VALUES ( %s, %s,%s) RETURNING *"
     vakues = [city.name, city.visited, city.country.id]
     results = run_sql(sql, values)
     id - results[0]['id']
@@ -15,20 +15,22 @@ def save(city):
 
 
 def select_all():
-    city = []
+    cities = []
 
-    sql = "SELECT * FROM city"
+    sql = "SELECT * FROM cities"
     results = run_sql(sql)
 
     for row in results:
-        countries = country_repository.select(row['country_id'])
+        country = country_repository.select(row['country_id'])
         city = City(row['name'], row["visited"], row['id'])
         cities.append(city)
         return cities
 
+
+
     def select(id):
         city = None
-        sql = "SELECT * FROM city WHER id = %s"
+        sql = "SELECT * FROM cities WHERE id = %s"
         values = [id]
         result = run_sql(sql, values)[0]
 
@@ -38,20 +40,18 @@ def select_all():
         return city
 
 
-
-
     def delete_all():
-        sql = "DELETE FROM city"
+        sql = "DELETE  FROM cities"
         run_sql(sql)
 
 
     def delete(id):
-        sql = "DELETE from city WHERE id = %s"
+        sql = "DELETE  from cities WHERE id = %s"
         values = [id]
         run_sql(sql, values)
 
     def update(city):
-        sql = "UPDATE city SET(name, visited) = (%s, %s) WHERE id = %s"
+        sql = "UPDATE cities SET (name, visited) = (%s, %s) WHERE id = %s"
         values = [city.name, city.visited, city.id]
         print (values)
         run_sql(sql, values)

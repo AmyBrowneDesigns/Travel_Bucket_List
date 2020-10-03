@@ -10,4 +10,4 @@ class TestCountry(unittest.TestCase):
     def test_country_has_name(self):
         self.assertEqual("UAE", self.country.name)
 
-        # won't show up error or show up as test passed
+  # won't show up error or show up as test passed for countries
