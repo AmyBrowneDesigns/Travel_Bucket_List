@@ -58,7 +58,7 @@ def update_city(id):
     country_id = request.form['country_id']
     country = country_repository.select(user_id)
     city = City(name, visited, country_id)
-    city_repository.update(task)
+    city_repository.update(city)
     return redirect('/cities')
 
 
