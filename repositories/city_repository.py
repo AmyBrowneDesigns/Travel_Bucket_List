@@ -3,15 +3,17 @@ from db.run_sql import run_sql
 from models.city import City
 from models.country import Country
 import repositories.city_repository as city_repository
+import repositories.country_repository as country_repository
 
 
 def save(city):
-    sql = "INSERT INTO cities (name, visited, country_id) VALUES ( %s, %s,%s) RETURNING *"
-    vakues = [city.name, city.visited, city.country.id]
+    sql = "INSERT INTO cities (name, country_id, visited) VALUES ( %s, %s, %s) RETURNING *"
+    values = [city.name, city.country.id, city.visited]
     results = run_sql(sql, values)
-    id - results[0]['id']
+    id = results[0]['id']
     city.id = id
     return city
+
 
 
 def select_all():
@@ -22,36 +24,38 @@ def select_all():
 
     for row in results:
         country = country_repository.select(row['country_id'])
-        city = City(row['name'], row["visited"], row['id'])
+        city = City(row['name'], country, row["visited"], row['id'])
         cities.append(city)
-        return cities
+    return cities
 
 
 
-    def select(id):
-        city = None
-        sql = "SELECT * FROM cities WHERE id = %s"
-        values = [id]
-        result = run_sql(sql, values)[0]
+def select(id):
+    city = None
+    sql = "SELECT * FROM cities WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
 
-        if result is not None:
-            country = country_repository.select(result['user_id'])
-            city = City(result['name'], result['visited'], result['id'])
-        return city
-
-
-    def delete_all():
-        sql = "DELETE  FROM cities"
-        run_sql(sql)
+    if result is not None:
+        country = country_repository.select(result['country_id'])
+        city = City(result['name'], country, result['visited'], result['id'])
+    return city
 
 
-    def delete(id):
-        sql = "DELETE  from cities WHERE id = %s"
-        values = [id]
-        run_sql(sql, values)
+def delete_all():
+    sql = "DELETE  FROM cities"
+    run_sql(sql)
 
-    def update(city):
-        sql = "UPDATE cities SET (name, visited) = (%s, %s) WHERE id = %s"
-        values = [city.name, city.visited, city.id]
-        print (values)
-        run_sql(sql, values)
+
+def delete(id):
+    sql = "DELETE  from cities WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+def update(city):
+    sql = "UPDATE cities SET (name, country_id, visited) = (%s, &s, %s) WHERE id = %s"
+    values = [city.name, city.country.id, city.visited, city.id]
+    print (values)
+    run_sql(sql, values)
+
+    #find update terminal command to check test.

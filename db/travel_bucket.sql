@@ -1,17 +1,20 @@
-DROP TABLE IF EXISTS city;
-DROP TABLE IF EXISTS country;
+DROP TABLE IF EXISTS cities;
+DROP TABLE IF EXISTS countries;
 
-CREATE TABLE country (
+CREATE TABLE countries (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255)
 );
 
-CREATE TABLE city (
+CREATE TABLE cities (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    visited BOOLEAN,
-    country_id INT REFERENCES country(id)
+    country_id INT REFERENCES countries(id),
+    visited BOOLEAN
+    
 );
+
+
 
 
 -- should these be cities and countries to go with repos? it does create table though!
