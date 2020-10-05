@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h2> Pick A City</h2>
+<a href="/cities/new"><button>Add New City</button></a>
+
+{% for city in template_cities %}
+<div>
+    <h4>{{ city.name }}</h4>
+</div>
+
+
+<form action="/cities/{{ city.id }}/delete" method= "POST">
+<input type="submit" value="Delete">
+</form>
+
+<a href="/cities/{{city.id}}/edit"><button>Edit</button></a>
+<!-- form to fill in for city - include back button to ink to last page-->
+
+<!-- <form action="/cities" method="post">
+    <div>
+        <label for="City">City:
+        </label>
+        <input type="text"
+        id="City"
+        name="City"
+        placeholder="City" autofocus>
+    </div>
+
+    <div>
+        <label for="Visited?">Visited?</label>
+        <input type="boolean" id="Visited"
+        name="Visited" placeholder="Visited" required>
+    </div>
+
+
+    <button type="Add Destination">Add Destination</button>
+
+    <button type="go Back">Go Back</buttontype></button>
+
+
+    <form action="/cities/{{ city.id }}/delete" method="POST">
+        <input type="submit" value="Delete city">
+    </form> -->
+
+{% endfor %}
+<!-- </form> --> 
+
+
+
+
+
+
+
+
+
+
+{% endblock %} 
+
+    

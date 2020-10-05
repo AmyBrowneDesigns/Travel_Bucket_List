@@ -8,8 +8,8 @@ import repositories.country_repository as country_repository
 #seeding connect repo and database
 
 
-# city_repository.delete_all()
-# country_repository.delete_all()
+city_repository.delete_all()
+country_repository.delete_all()
 
 country1 = Country("Singapore")
 country_repository.save(country1)

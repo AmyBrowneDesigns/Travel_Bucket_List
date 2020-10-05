@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/cities/{{city.id}}" method='post'
+></form>
+
+<div>
+    <label for="Visited">Visited:</label>
+    <select id="Visited" name="Visited">
+    <option value="True"
+        {% if city.visited == True %} selected = 'selected' {% endif %} >True</option>
+
+    </option>
+    <option value=""False
+    {% if city.visited == False %} selected = 'selected'{% endif %}>False</option>
+    </select>
+    
+<!-- done after 5pm -->
+    <form action="/cities/{{ city.id }}/edit" method="POST"><input type="Submit" value="Edit">
+    </form>
+
+</div>
+
+
+
+
+
+
+{% endblock %}
