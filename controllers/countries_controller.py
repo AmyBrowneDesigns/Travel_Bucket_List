@@ -11,6 +11,7 @@ def countries():
     countries = country_repository.select_all()
     cities = city_repository.select_all()
     return render_template("/countries/index.html", countries=countries, cities=cities)
+    # first countries refers to variable in html file and = countries is the list of countries from line above
 
 #show
 #get
@@ -32,7 +33,7 @@ def new_country():
 
 @countries_blueprint.route("/countries", methods= ['POST'])
 def create_country():
-    name = request.form['country']
+    name = request.form['name']
     country = Country(name)
     country_repository.save(country)
     return redirect('/countries')

@@ -7,29 +7,33 @@
 {% for country in countries %}
 <div>
     <h3>Country I would like to visit: {{country.name}}</h3>
+
+    <a href="/countries/{{country.id}}/edit"><button>Edit</button></a>
+
+    <form action="/countries/{{ country.id }}/delete" method="POST">
+        <input type="submit" value="Delete from Bucket List">
+    </form>
+
     {% for city in cities %}
         {% if city.country.id == country.id %}
             <p>{{ city.name }}</p>
+            <a href="/cities/{{city.id}}/edit"><button>Edit</button></a>
+            <form action="/cities/{{city.id}}/delete" method="POST">
+                <input type="submit" value="Delete">
+            </form>
         {% endif %}    
 
     {% endfor %}
-    <a href="/countries/{{country.id}}/edit"><button>Edit</button></a>
     <!-- use this for cities -->
 
    
 
-
-    <!-- <a href="/cities/new"><button>Add City</button></a>
+   
     <form action="/cities" method='POST'>
-        <label for="city">City Name</label>
-        <input type="text" id="city" name="city">
         <input type="submit" value="Add City">
-    </form>
-         -->
-
-
-    <form action="/countries/{{ country.id }}/delete" method="POST">
-        <input type="submit" value="Delete from Bucket List">
+        <input type="text" id="city" name="name">
+        <input type="hidden" id='country' name='country_id' value='{{country.id}}'>
+        <input type="hidden" id='visited' name='visited' value='False'>
     </form>
 </div>
 {% endfor %}

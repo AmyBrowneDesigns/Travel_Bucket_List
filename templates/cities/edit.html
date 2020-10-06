@@ -23,8 +23,7 @@
 </div>
 
 <div>
-    <label for="country">Country</label>
-    <select name="country_id" id="country">
+    <!-- <select name="country_id" id="country">
         {% for country in all_countries %}
             {% if country.id == city.country.id %}
             <option value="{{ country.id}}" selected>{{ country.name }}</option>
@@ -32,7 +31,8 @@
             <option value="{{ country.id}}">{{ country.name }}</option>
             {%endif%}
         {% endfor %}
-    </select>
+    </select> -->
+    <input type="hidden" id="country" name="country_id" value="{{city.country.id}}">
 </div>
 
 
