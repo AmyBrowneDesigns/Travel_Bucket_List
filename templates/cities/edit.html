@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/cities/{{city.id}}" method='post'
-></form>
+<h2>Edit My Destination</h2>
+
+<form action="/cities/{{city.id}}" method='post'>
 
 <div>
-    <label for="Visited">Visited:</label>
-    <select id="Visited" name="Visited">
+    <label for="visited">Visited:</label>
+    <select id="visited" name="visited">
     <option value="True"
         {% if city.visited == True %} selected = 'selected' {% endif %} >True</option>
 
@@ -16,8 +17,28 @@
     </select>
     
 <!-- done after 5pm -->
-    <form action="/cities/{{ city.id }}/edit" method="POST"><input type="Submit" value="Edit">
-    </form>
+<div>
+    <label for="name">City Name</label>
+    <input type="text" id='name' name='name' value='{{city.name}}'>
+</div>
+
+<div>
+    <label for="country">Country</label>
+    <select name="country_id" id="country">
+        {% for country in all_countries %}
+            {% if country.id == city.country.id %}
+            <option value="{{ country.id}}" selected>{{ country.name }}</option>
+            {% else %}
+            <option value="{{ country.id}}">{{ country.name }}</option>
+            {%endif%}
+        {% endfor %}
+    </select>
+</div>
+
+
+<input type="submit" value='Edit Destination'>
+</form>
+   
 
 </div>
 

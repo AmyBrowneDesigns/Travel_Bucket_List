@@ -4,7 +4,6 @@
 <h2> MY BUCKET LIST</h2>
     <a href="/countries/new"><button>Add New Destination</button></a>
 
-<!-- images for selecting country go as background on css -->
 {% for country in countries %}
 <div>
     <h3>Country I would like to visit: {{country.name}}</h3>
@@ -14,17 +13,19 @@
         {% endif %}    
 
     {% endfor %}
-    <!-- <a href="/countries/{{country.id}}">edit</a> -->
+    <a href="/countries/{{country.id}}/edit"><button>Edit</button></a>
     <!-- use this for cities -->
 
-<!-- 
-    <a href="/cities/new"><button>Add City</button></a> -->
-    <!-- <form action="/cities" method='POST'>
+   
+
+
+    <!-- <a href="/cities/new"><button>Add City</button></a>
+    <form action="/cities" method='POST'>
         <label for="city">City Name</label>
         <input type="text" id="city" name="city">
         <input type="submit" value="Add City">
-    </form> -->
-        
+    </form>
+         -->
 
 
     <form action="/countries/{{ country.id }}/delete" method="POST">

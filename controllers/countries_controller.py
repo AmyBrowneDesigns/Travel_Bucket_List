@@ -53,12 +53,12 @@ def edit_country(id):
 
 # #update
 # #put
-# @countries_blueprint.route("/countries/<id>", methods= ['POST'])
-# def update_country(id):
-#     name = request.form ['name']
-#     country = Country(name)
-#     country_repository.update(country)
-#     return redirect('/countries')
+@countries_blueprint.route("/countries/<id>", methods= ['POST'])
+def update_country(id):
+    name = request.form ['name']
+    country = Country(name, id)
+    country_repository.update(country)
+    return redirect('/countries')
 
 
 # #delete

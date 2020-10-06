@@ -9,6 +9,8 @@
 {% for city in template_cities %}
 <div>
     <h4>{{ city.name }}</h4>
+    <p>{{ city.country.name }}</p>
+    <p>Visited: {{ city.visited }}</p>
 </div>
 
 

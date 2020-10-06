@@ -1,12 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!-- post 5pm at home -->
 <form action="/countries/{{country.id}}" method='post'
-></form>
+>
 
 
+<div>
+    <label for="name">Country Name</label>
+    <input type="text" id='name' name='name' value='{{country.name}}'>
+</div>
 
 
+<div>
+    <input type="submit" value="Edit">
+</div>
 
-
+</form>
 {% endblock %}
