@@ -1,0 +1,25 @@
+<mxfile host="app.diagrams.net" modified="2020-10-02T19:22:10.764Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="eMvp4Ox-Xty5O0Vu2YVm" version="13.7.1" type="github">
+  <diagram id="B5DYmpfeQi6SbAOCpK3I" name="Page-1">
+    <mxGraphModel dx="1026" dy="465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UMUsewe1KVC9wM5Ozohf-1" value="NAME:STR&lt;br&gt;&lt;br&gt;CONTINTENT:STR&lt;br&gt;&lt;br&gt;ID:INT" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="320" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="UMUsewe1KVC9wM5Ozohf-2" value="NAME:STR&lt;br&gt;&lt;br&gt;VISITED:BOOL&lt;br&gt;&lt;br&gt;ID:INT&lt;br&gt;&lt;br&gt;COUNTRY ID:INT&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="451" y="41" width="320" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="UMUsewe1KVC9wM5Ozohf-3" value="COUNTRY CLASS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UMUsewe1KVC9wM5Ozohf-4" value="CITY CLASS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="450" y="40" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UMUsewe1KVC9wM5Ozohf-5" value="NOTE : &lt;br&gt;&lt;br&gt;EACH COUNTRY HAS AN ID AND EACH COUNTRY CAN HAVE 1 OR MORE CITIES. ONE TO MANY RELATIONSHIP FOR MODELS. WHEN COUNTRY IS SELECTED THE CITY WILL ONLY SHOW CITIES ASSIGNED TO THAT COUNTRY ID AS OPTIONS IN FORM." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="34" y="400" width="320" height="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,2 @@
+# CC_Python_Project_Bucket_List
+An app to track someone's travel adventures.  MVP: The app allows the user to track countries and cities they want to visit and those they have visited. The user is able to create and edit countries. Each country has one or more cities to visit. The user is able to create and delete entries for cities. The app allows the user to mark destinations as visited or still to see.
