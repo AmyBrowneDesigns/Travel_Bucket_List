@@ -1,0 +1,7 @@
+.edit-backdrop {
+    padding-top: 10px;
+    height: 50vh;
+    background-image: url("../../img/sand.jpg");
+    background-size: cover;
+    /* background-color: lime; */
+}

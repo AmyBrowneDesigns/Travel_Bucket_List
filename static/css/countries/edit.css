@@ -4,7 +4,8 @@
 
 .edit-country-background {
     padding-top: 10px;
-    background-image: url("../../img/china.jpg");
+    height:50vh;
+    background-image: url("../../img/bolivia.jpg");
     background-size: cover;
 }
 
