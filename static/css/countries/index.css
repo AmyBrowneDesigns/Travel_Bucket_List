@@ -3,3 +3,9 @@
     
 }
 
+.bucket-list-display {
+    background-image: url("../../img/bucket_list_display.jpg");
+    background-size: cover;
+    padding: 30px;
+    /* background-color: lightslategray; */
+}

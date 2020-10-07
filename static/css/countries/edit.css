@@ -1,4 +1,11 @@
-body {
+/* body {
     background-image: url (('static', filename'=img/plan.jpg');
+} */
+
+.edit-country-background {
+    padding-top: 10px;
+    background-image: url("../../img/china.jpg");
+    background-size: cover;
 }
 
+/* change image for text */

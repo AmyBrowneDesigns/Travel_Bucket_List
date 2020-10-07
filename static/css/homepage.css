@@ -5,9 +5,9 @@ body {
     text-align: center;
 }
 
-.homepage {
+/* .homepage {
     background-image: url(../img/favourites/australia.png);
-  }
+  } */
 
 
 .blog-block {
@@ -16,7 +16,7 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     margin: auto;
-
+    background-color: lightsteelblue;
 }
 
 .image-block {

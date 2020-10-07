@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
+<section class="bucket-list-display">
 
 <h2> MY BUCKET LIST</h2>
     <a href="/countries/new"><button>Add New Destination</button></a>
 
 {% for country in countries %}
-<div class="country-container">
+<div>
     <h3>Country I would like to visit: {{country.name}}</h3>
 
     <a href="/countries/{{country.id}}/edit"><i class="fa fa-pencil" style="font-size:10px;color:green"></i></a>
@@ -39,8 +40,10 @@
         <input type="hidden" id='visited' name='visited' value='False'>
     </form>
 </div>
+
 {% endfor %}
 
+</section>
 
 
 {% endblock %}

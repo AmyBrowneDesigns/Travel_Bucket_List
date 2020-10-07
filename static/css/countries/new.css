@@ -1,0 +1,11 @@
+.background-image-new-country{
+    padding: 30px;
+    height: 100vh;
+    background-image: url("../../img/pickcountry.jpg");
+    background-size: cover;
+    background-color: aquamarine;
+}
+
+main > section {
+    color:floralwhite;
+} 

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <!-- post 5pm at home -->
+<section class="edit-country-background">
 <form action="/countries/{{country.id}}" method='post'
 >
 
@@ -17,4 +18,5 @@
 </div>
 
 </form>
+</section>
 {% endblock %}

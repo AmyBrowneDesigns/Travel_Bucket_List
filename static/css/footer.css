@@ -1,4 +1,3 @@
-
 body > footer > nav > ul >li {
     color: floralwhite;
     font-size: 10pt;
@@ -12,7 +11,7 @@ body > footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     flex-direction: column;
-
+    
 }
 
 body > footer > p {
