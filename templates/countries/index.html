@@ -9,15 +9,17 @@
 <div>
     <section>
     <section id="country-section">
-        <h4>Country I would like to visit: {{country.name}}</h4>
-
+        <h4>Country: {{country.name}}</h4>
+    <div class='editpencil-country'>
         <a href="/countries/{{country.id}}/edit"><i class="fa fa-pencil" style="font-size:10px;color:green"></i></a>
+    </div>
         <!-- <button>Edit</button> -->
-
+    <div class= 'trashicon-country'>
         <form action="/countries/{{ country.id }}/delete" method="POST">
             <button type="submit" value="Delete"><i class="fa fa-trash-o" style="font-size:10px;color:red"></i></button>
         </form>
-    </section>      
+    </div>
+    </section class= 'city-names'>      
     {% for city in cities %}
         {% if city.country.id == country.id %}
             <p>{{ city.name }}</p> 
@@ -27,11 +29,14 @@
                 <p>Not Yet!</p>
             {% endif %}
             <!-- <a href="/cities/{{city.id}}/edit"><button>Edit</button></a> -->
+        <div class='edit-pencil'>
             <a href="/cities/{{city.id}}/edit"><i class="fa fa-pencil" style="font-size:10px;color:green"></i></a>
-
+        </div>
+        <div class='trashcan'>
             <form action="/cities/{{city.id}}/delete" method="POST">
                 <button type="submit" value="Delete"><i class="fa fa-trash-o" style="font-size:10px;color:red"></i></button>
             </form>
+        </div>
         {% endif %}    
 
     {% endfor %}
