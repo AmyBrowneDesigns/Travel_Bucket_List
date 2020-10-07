@@ -1,0 +1,35 @@
+body {
+    margin:0px;
+    padding:0px;
+    justify-content: center;
+    text-align: center;
+}
+
+.homepage {
+    background-image: url(../img/favourites/australia.png);
+  }
+
+
+.blog-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.image-block {
+    display: block;
+}
+
+.background-image-home {
+    padding-top: 10px;
+    height: 50vh;
+    background-image: url("../img/homepage.jpg");
+    background-size: cover;
+}
+
+.image-block > img {
+    border-radius: 8px;
+}

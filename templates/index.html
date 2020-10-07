@@ -1,26 +1,42 @@
 {% extends "base.html" %}
 {% block content %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRAVEL BUCKETLIST</title>
-</head>
-<body>
-  
-    <main>
+    <section class="background-image-home">
         <form action="/countries">
             <input type="submit" value="GO TO MY BUCKET LIST">
         </form>
-    </main>
+    </section>
+    <section>
+            <section class= "blog-block">
+                <div class="image-block"><h4>Sustainable Travel</h4>
+                <img src = "https://placebear.com/200/200" alt = "Here is a bear">
+                </div>
 
 
-    <footer>
-       
-    </footer>
-</body>
+                <div class="image-block"><h4>Working while Travelling</h4>
+                 <img src = "https://placebear.com/200/200" alt = "Here is a bear"> 
+                </div>
+
+
+                <div class="image-block"><h4>Off the Beaten Track</h4>
+                 <img src = "https://placebear.com/200/200" alt = "Here is a bear">
+                </div>
+
+
+                <div class="image-block"><h4>Planning and Travel</h4>
+                 <img src = "../static/img/oxana-v-qoAIlAmLJBU-unsplash.jpg" width="200" height="200" alt = "Here is a bear">
+                </div>
+
+
+                <div class="image-block"><h4>Food Guide</h4>
+                 <img src = "https://placebear.com/200/200" alt = "Here is a bear">
+                </div>
+
+
+                <div class="image-block"><h4>Go Local</h4>
+                 <img src = "https://placebear.com/200/200" alt = "Here is a bear">
+                </div>
+            </section>
+        </section> 
 </html>
 
 {% endblock %}

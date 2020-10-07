@@ -63,7 +63,7 @@ def update_city(id):
     country = country_repository.select(country_id)
     city = City(name, country, visited, id)
     city_repository.update(city)
-    return redirect('/cities')
+    return redirect('/countries')
 
 
 

@@ -1,0 +1,29 @@
+
+body > footer > nav > ul >li {
+    color: floralwhite;
+    font-size: 10pt;
+    width: 100%;
+    margin: 5px;
+}
+
+body > footer {
+    background-color: rgb(140, 163, 106);
+    color: floralwhite;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+
+}
+
+body > footer > p {
+    margin: 0;
+}
+
+body > footer > nav > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 0;
+}
+

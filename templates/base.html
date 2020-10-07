@@ -6,30 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <!-- cities style pages: -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cities/edit.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cities/new.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cities/index.css') }}">
+
+
+  <!-- countries style pages: -->
+<!-- edit the city to visited, and city name -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/countries/edit.css') }}">
+  <!-- edit country name incase misspelled -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/countries/index.css') }}">
   
-  <!-- do link for css files by same above linkbut refer the folder and css file for it -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/countries/new.css') }}">
+ 
+  
+
+  <!-- main and base pages: -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+ 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+
+
+
   <title>My Bucket List Project</title>
 </head>
 <body>
   <header>
-    <header>
-      <h1 id="test">My Travel Bucket List </h1>
+      <h1 >HODOPHILE</h1>
+      <h2>For the love of travel </h2>
+  </header>
 
-  </header>
+
+  <main> 
   
-    <nav>
-      <ul class="menu">
-      </ul>
-    </nav>
-  </header>
-  <div class="container">
-    {% block content %}
-    {% endblock %}
-  </div>
+  {% block content %}
+  {% endblock %}
+
+  </main>
+
+
   <footer>
-    <nav>
-      <p>&copy; My Bucket List 2020</p>
+    <p>&copy; My Bucket List 2020</p>
+    <nav class= 'footer-block'>
       <ul>
           <li>Blog</li>
           <li>About</li>
