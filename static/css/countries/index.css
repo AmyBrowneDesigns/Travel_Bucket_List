@@ -3,8 +3,9 @@
     
 }
 
+
 .bucket-list-display {
-    background-image: url("../../img/bucket_list_display.jpg");
+    background-image: url("../../img/bucket_list_display2.jpg");
     background-size: cover;
     padding: 30px;
     /* background-color: lightslategray; */
@@ -18,3 +19,8 @@
 /* main > div > section > {
     margin-bottom: 100px;
 } */
+
+body > main > section {
+    font-family: 'Varela Round', sans-serif;
+}
+

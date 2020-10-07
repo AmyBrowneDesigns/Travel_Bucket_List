@@ -3,12 +3,13 @@ body {
     padding:0px;
     justify-content: center;
     text-align: center;
+    font-family: font-family: 'Varela Round', sans-serif;
 }
 
 
-/* .homepage {
-    background-image: url(../img/favourites/australia.png);
-  } */
+  body > main {
+      font-family: font-family: 'Varela Round', sans-serif;
+  }
 
 
 .blog-block {
