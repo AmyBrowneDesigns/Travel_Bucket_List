@@ -7,18 +7,25 @@
 
 {% for country in countries %}
 <div>
-    <h3>Country I would like to visit: {{country.name}}</h3>
+    <section>
+    <section id="country-section">
+        <h3>Country I would like to visit: {{country.name}}</h3>
 
-    <a href="/countries/{{country.id}}/edit"><i class="fa fa-pencil" style="font-size:10px;color:green"></i></a>
-    <!-- <button>Edit</button> -->
+        <a href="/countries/{{country.id}}/edit"><i class="fa fa-pencil" style="font-size:10px;color:green"></i></a>
+        <!-- <button>Edit</button> -->
 
-    <form action="/countries/{{ country.id }}/delete" method="POST">
-        <button type="submit" value="Delete"><i class="fa fa-trash-o" style="font-size:10px;color:red"></i></button>
-    </form>
-
+        <form action="/countries/{{ country.id }}/delete" method="POST">
+            <button type="submit" value="Delete"><i class="fa fa-trash-o" style="font-size:10px;color:red"></i></button>
+        </form>
+    </section>      
     {% for city in cities %}
         {% if city.country.id == country.id %}
-            <p>{{ city.name }}</p>
+            <p>{{ city.name }}</p> 
+            {% if city.visited == True %}
+                <p>Visted!</p>
+            {% else %}
+                <p>Not Yet!</p>
+            {% endif %}
             <!-- <a href="/cities/{{city.id}}/edit"><button>Edit</button></a> -->
             <a href="/cities/{{city.id}}/edit"><i class="fa fa-pencil" style="font-size:10px;color:green"></i></a>
 
@@ -39,6 +46,7 @@
         <input type="hidden" id='country' name='country_id' value='{{country.id}}'>
         <input type="hidden" id='visited' name='visited' value='False'>
     </form>
+    </section>
 </div>
 
 {% endfor %}

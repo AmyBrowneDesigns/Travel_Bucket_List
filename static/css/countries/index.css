@@ -9,3 +9,12 @@
     padding: 30px;
     /* background-color: lightslategray; */
 }
+
+#country-section {
+    display: flex;
+    justify-content: center;
+}
+
+/* main > div > section > {
+    margin-bottom: 100px;
+} */
