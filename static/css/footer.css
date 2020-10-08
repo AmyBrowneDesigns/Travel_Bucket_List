@@ -12,6 +12,7 @@ body > footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     flex-direction: column;
+    word-spacing: normal;
     
 }
 

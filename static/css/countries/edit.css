@@ -9,4 +9,8 @@
     background-size: cover;
 }
 
+body > main > section > h5 {
+    font-family: cursive;
+    padding-top: 40px
+}
 /* change image for text */

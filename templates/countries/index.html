@@ -3,7 +3,7 @@
 <section class="bucket-list-display">
 
 <h2> MY BUCKET LIST</h2>
-    <a href="/countries/new"><button>Add New Destination</button></a>
+    <a class= 'link' class='destination-button'href="/countries/new"><button>Add New Destination</button></a>
 
 {% for country in countries %}
 <div>
@@ -32,6 +32,7 @@
         <div class='edit-pencil'>
             <a href="/cities/{{city.id}}/edit"><i class="fa fa-pencil" style="font-size:10px;color:green"></i></a>
         </div>
+
         <div class='trashcan'>
             <form action="/cities/{{city.id}}/delete" method="POST">
                 <button type="submit" value="Delete"><i class="fa fa-trash-o" style="font-size:10px;color:red"></i></button>
