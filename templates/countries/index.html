@@ -19,7 +19,8 @@
             <button type="submit" value="Delete"><i class="fa fa-trash-o" style="font-size:10px;color:red"></i></button>
         </form>
     </div>
-    </section class= 'city-names'>      
+    </section>
+    <section class= 'city-names'>      
     {% for city in cities %}
         {% if city.country.id == country.id %}
             <p>{{ city.name }}</p> 
@@ -29,24 +30,25 @@
                 <p>Not Yet!</p>
             {% endif %}
             <!-- <a href="/cities/{{city.id}}/edit"><button>Edit</button></a> -->
-        <div class='edit-pencil'>
-            <a href="/cities/{{city.id}}/edit"><i class="fa fa-pencil" style="font-size:10px;color:green"></i></a>
-        </div>
+        <!-- <div class='edit-pencil'> -->
+            <a href="/cities/{{ city.id }}/edit"><i class="fa fa-pencil" style="font-size:10px;color:green"></i></a>
+        <!-- </div> -->
 
-        <div class='trashcan'>
+        <!-- <div class='trashcan'> -->
             <form action="/cities/{{city.id}}/delete" method="POST">
                 <button type="submit" value="Delete"><i class="fa fa-trash-o" style="font-size:10px;color:red"></i></button>
             </form>
-        </div>
+        <!-- </div> -->
         {% endif %}    
 
     {% endfor %}
+    </section>
     <!-- use this for cities -->
 
    
 
    
-    <form action="/cities" method='POST'>
+    <form class="edit-form" action="/cities" method='POST'>
         <input type="submit" value="Add City">
         <input type="text" id="city" name="name">
         <input type="hidden" id='country' name='country_id' value='{{country.id}}'>

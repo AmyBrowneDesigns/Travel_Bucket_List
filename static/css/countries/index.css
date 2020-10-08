@@ -33,12 +33,13 @@ body > main > section {
 .edit-pencil {
     position: relative;
     left: 40px;
-    bottom:40px;
+    bottom: 40px;
 }
+
 .editpencil-country {
     position: relative;
     top:20px;
-    left:5px
+    left:5px;
 }
 .trashicon-country {
     position: relative;
@@ -65,3 +66,7 @@ main > header > h2 {
 a:hover {
     background-color: seagreen;
 } */
+
+.edit-form {
+    margin-top: 15px;
+}
